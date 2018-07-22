@@ -2,12 +2,13 @@ package com.yashraja.linkedlist;
 
 public class ReverseLinkedList extends LinkedList {
 
-	public Node reverseLL(Node node) {
+	public void reverseLL(Node node) {
 
 		Node current = node;
 
 		if (current == null || current.next == null) {
-			return current;
+			displayLL(current);
+			return ;
 		}
 
 		Node prev = null;
@@ -19,8 +20,9 @@ public class ReverseLinkedList extends LinkedList {
 			prev = current;
 			current = next;
 		}
-
-		return prev;
+		System.out.println("&&&&&&&&&&");
+		displayLL(prev);
+		System.out.println("&&&&&&&&&&");
 	}
 
 	public static void main(String[] args) {
@@ -28,8 +30,7 @@ public class ReverseLinkedList extends LinkedList {
 		obj.push(1);
 		obj.push(2);
 		obj.displayLL();
-		Node rev = obj.reverseLL(obj.getHead());
+		obj.reverseLL(obj.getHead());
 		System.out.println("----------------");
-		obj.displayLL(rev);
 	}
 }
