@@ -39,4 +39,10 @@ public class LinkedList {
 			current = current.next;
 		}
 	}
+	
+	public void populateLL(int total) {
+		for(int i = 1; i <= total; i++ ) {
+			push(i);
+		}
+	}
 }
